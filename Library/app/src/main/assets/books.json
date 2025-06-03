@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "description": "A classic American novel about the Jazz Age and the American Dream.",
+    "rating": 4,
+    "imageUrl": "book_placeholder",
+    "isBookmarked": 0
+  },
+  {
+    "id": "2",
+    "title": "The Great Gatsby 2",
+    "author": "F. Scott Fitzgerald",
+    "description": "A classic  kugsdjfskdjfffskkdjhhhhhhhhhhhhhhhhhhhhhhhhhh    American novel about the Jazz Age and the American Dream.",
+    "rating": 3,
+    "imageUrl": "book_placeholder",
+    "isBookmarked": 1
+  }
+]

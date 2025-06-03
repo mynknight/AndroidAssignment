@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Library</string>
+    <string name="title_home">Home</string>
+    <string name="title_favourites">Favourites</string>
+    <string name="title_profiles">Profile</string>
+    <string name="popular_books">Popular Books</string>
+    <string name="book_title">Book Title</string>
+    <string name="view">View</string>
+    <string name="todo">TODO</string>
+    <string name="todo2">TODO</string>
+</resources>
