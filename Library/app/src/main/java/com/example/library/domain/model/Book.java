@@ -21,6 +21,9 @@ public class Book {
         this.imageUrl = imageUrl;
         this.isBookmarked = isBookmarked;
     }
+    public void setBookmarked(boolean bookmarked) {
+        this.isBookmarked = bookmarked;
+    }
     public Book withBookmarked(boolean bookmarked) {
         return new Book(
                 this.id,

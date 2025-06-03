@@ -24,6 +24,10 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
     private int expandedPosition = -1; // No card expanded by default
     private OnBookActionListener listener;
 
+    public interface OnBookActionListener {
+        void onBookmarkToggle(Book book, int position, boolean newState);
+    }
+
     public BookAdapter(List<Book> books) {
         this.books = books;
     }
@@ -54,7 +58,6 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
         holder.bookAuthor.setText(book.getAuthor());
         holder.bookDescription.setText(book.getDescription());
 
-        // Load image (placeholder if invalid)
         try {
             int resourceId = Integer.parseInt(book.getImageUrl());
             holder.bookImage.setImageResource(resourceId);
@@ -62,17 +65,13 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
             holder.bookImage.setImageResource(R.drawable.book_placeholder);
         }
 
-        // Expansion logic
         boolean isExpanded = position == expandedPosition;
         holder.bookDescription.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
         holder.downloadButton.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
         holder.itemView.setActivated(isExpanded);
         holder.bookRating.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
-
-        // Set the rating value
         holder.bookRating.setRating(book.getRating());
 
-        // Toggle expansion on card click
         holder.itemView.setOnClickListener(v -> {
             int oldPosition = expandedPosition;
             expandedPosition = isExpanded ? -1 : position;
@@ -80,20 +79,26 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
             notifyItemChanged(position);
         });
 
-        // Download button click
         holder.downloadButton.setOnClickListener(v -> {
             Toast.makeText(v.getContext(),
                     "Downloading: " + book.getTitle(),
                     Toast.LENGTH_SHORT).show();
         });
 
-        // Optional: handle action button if you want to support other actions
+        // Set bookmark button text
+        holder.actionButton.setText(book.isBookmarked() ? "Bookmarked" : "Bookmark");
+
+        // Bookmark button click listener
         holder.actionButton.setOnClickListener(v -> {
+            boolean newState = !book.isBookmarked();
+            book.setBookmarked(newState);
+            holder.actionButton.setText(newState ? "Bookmarked" : "Bookmark");
             if (listener != null) {
-                listener.onBookButtonClick(book, position);
+                listener.onBookmarkToggle(book, position, newState);
             }
         });
     }
+
 
     @Override
     public int getItemCount() {
@@ -121,8 +126,8 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
     }
 
     // Listener interface
-    public interface OnBookActionListener {
-        void onBookClick(Book book, int position);
-        void onBookButtonClick(Book book, int position);
-    }
+//    public interface OnBookActionListener {
+//        void onBookClick(Book book, int position);
+//        void onBookButtonClick(Book book, int position);
+//    }
 }
