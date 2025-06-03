@@ -18,11 +18,11 @@
         android:label="@string/title_favourites"
         tools:layout="@layout/fragment_dashboard" />
 
-    <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.library.ui.notifications.NotificationsFragment"
-        android:label="@string/title_profiles"
-        tools:layout="@layout/fragment_notifications" />
+<!--    <fragment-->
+<!--        android:id="@+id/navigation_notifications"-->
+<!--        android:name="com.example.library.ui.notifications.NotificationsFragment"-->
+<!--        android:label="@string/title_profiles"-->
+<!--        tools:layout="@layout/fragment_notifications" />-->
 <!--    <fragment-->
 <!--        android:id="@+id/bookDetailFragment"-->
 <!--        android:name="com.example.library.ui.detail.BookDetailFragment"-->

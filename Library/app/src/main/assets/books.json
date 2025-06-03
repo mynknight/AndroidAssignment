@@ -3,17 +3,53 @@
     "id": "1",
     "title": "The Great Gatsby",
     "author": "F. Scott Fitzgerald",
-    "description": "A classic American novel about the Jazz Age and the American Dream.",
+    "description": "A classic American novel set in the 1920s, exploring themes of wealth, love, and the elusive American Dream.",
     "rating": 4,
     "imageUrl": "book_placeholder",
     "isBookmarked": 0
   },
   {
     "id": "2",
-    "title": "The Great Gatsby 2",
-    "author": "F. Scott Fitzgerald",
-    "description": "A classic  kugsdjfskdjfffskkdjhhhhhhhhhhhhhhhhhhhhhhhhhh    American novel about the Jazz Age and the American Dream.",
-    "rating": 3,
+    "title": "1984",
+    "author": "George Orwell",
+    "description": "A dystopian novel that delves into government surveillance, totalitarianism, and the dangers of absolute power.",
+    "rating": 5,
+    "imageUrl": "book_placeholder",
+    "isBookmarked": 1
+  },
+  {
+    "id": "3",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "description": "A moving story about racial injustice and moral growth in the American South, seen through the eyes of a young girl.",
+    "rating": 5,
+    "imageUrl": "book_placeholder",
+    "isBookmarked": 1
+  },
+  {
+    "id": "4",
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "description": "A story of teenage rebellion and alienation narrated by the iconic Holden Caulfield.",
+    "rating": 4,
+    "imageUrl": "book_placeholder",
+    "isBookmarked": 0
+  },
+  {
+    "id": "5",
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "description": "A witty and romantic tale highlighting societal expectations and personal misunderstandings in 19th-century England.",
+    "rating": 5,
+    "imageUrl": "book_placeholder",
+    "isBookmarked": 0
+  },
+  {
+    "id": "6",
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "description": "An epic fantasy adventure following Bilbo Baggins as he journeys across Middle-earth with dwarves and a wizard.",
+    "rating": 5,
     "imageUrl": "book_placeholder",
     "isBookmarked": 1
   }
